@@ -15,4 +15,4 @@ RUN apt-get update \
     && mkdir -p outputs \
     && chmod -R 777 /app
 
-CMD ["/opt/spark/bin/spark-submit", "kmeans_openfoodfacts.py", "--input", "data/sample_openfoodfacts.csv", "--k", "5", "--output-dir", "outputs/openfoodfacts_kmeans"]
+CMD ["/opt/spark/bin/spark-submit", "src/kmeans_openfoodfacts.py", "--input", "data/sample_openfoodfacts.csv", "--k", "5", "--output-dir", "outputs/openfoodfacts_kmeans"]

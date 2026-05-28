@@ -41,13 +41,13 @@ data/sample_openfoodfacts.csv
 ## Проверка Spark
 
 ```bash
-.venv/bin/python wordcount.py
+.venv/bin/python src/wordcount.py
 ```
 
 ## Обучение
 
 ```bash
-.venv/bin/python kmeans_openfoodfacts.py \
+.venv/bin/python src/kmeans_openfoodfacts.py \
   --input data/sample_openfoodfacts.csv \
   --k 5 \
   --output-dir outputs/openfoodfacts_kmeans
@@ -57,7 +57,7 @@ Docker:
 
 ```bash
 docker build -t big-data-lab5-openfoodfacts-kmeans .
-docker run --rm big-data-lab5-openfoodfacts-kmeans /opt/spark/bin/spark-submit wordcount.py
+docker run --rm big-data-lab5-openfoodfacts-kmeans /opt/spark/bin/spark-submit src/wordcount.py
 docker run --rm -v "$PWD/outputs:/app/outputs" big-data-lab5-openfoodfacts-kmeans
 ```
 

@@ -6,7 +6,7 @@ services:
       - ./outputs:/app/outputs
     command:
       - /opt/spark/bin/spark-submit
-      - kmeans_openfoodfacts.py
+      - src/kmeans_openfoodfacts.py
       - --input
       - data/sample_openfoodfacts.csv
       - --k
@@ -19,4 +19,4 @@ services:
     image: big-data-lab5-openfoodfacts-kmeans:latest
     command:
       - /opt/spark/bin/spark-submit
-      - wordcount.py
+      - src/wordcount.py
