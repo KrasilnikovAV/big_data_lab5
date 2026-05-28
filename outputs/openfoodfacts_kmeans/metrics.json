@@ -1,0 +1,19 @@
+{
+  "input": "data/sample_openfoodfacts.csv",
+  "k": 5,
+  "seed": 42,
+  "sample_fraction": 1.0,
+  "features": [
+    "energy-kcal_100g",
+    "fat_100g",
+    "carbohydrates_100g",
+    "sugars_100g",
+    "proteins_100g",
+    "salt_100g"
+  ],
+  "rows_before_cleaning": 10000,
+  "rows_after_cleaning": 1643,
+  "rows_for_training": 1643,
+  "silhouette": 0.5681982910900836,
+  "model_path": "outputs/openfoodfacts_kmeans/model"
+}

@@ -1,0 +1,4 @@
+hello spark
+hello pyspark
+spark is fast
+pyspark is python api for spark

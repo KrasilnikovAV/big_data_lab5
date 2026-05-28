@@ -1,0 +1,21 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+.*.crc
+
+# Raw/local datasets are large. The prepared dataset is included in the zip distribution.
+data/*.csv
+data/*.tsv
+data/*.json
+data/*.tar.gz
+data/.DS_Store
+!data/sample_openfoodfacts.csv
+
+# Local Spark/runtime files
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Keep the final checked distribution archive, ignore temporary stage directory.
+dist/big_data_lab5_openfoodfacts_kmeans/

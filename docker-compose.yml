@@ -1,0 +1,22 @@
+services:
+  kmeans:
+    build: .
+    image: big-data-lab5-openfoodfacts-kmeans:latest
+    volumes:
+      - ./outputs:/app/outputs
+    command:
+      - /opt/spark/bin/spark-submit
+      - kmeans_openfoodfacts.py
+      - --input
+      - data/sample_openfoodfacts.csv
+      - --k
+      - "5"
+      - --output-dir
+      - outputs/openfoodfacts_kmeans
+
+  wordcount:
+    build: .
+    image: big-data-lab5-openfoodfacts-kmeans:latest
+    command:
+      - /opt/spark/bin/spark-submit
+      - wordcount.py
