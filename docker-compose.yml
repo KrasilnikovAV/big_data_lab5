@@ -6,7 +6,7 @@ services:
       - ./outputs:/app/outputs
     command:
       - /opt/spark/bin/spark-submit
-      - src/kmeans_openfoodfacts.py
+      - src/kmeans.py
       - --input
       - data/sample_openfoodfacts.csv
       - --k

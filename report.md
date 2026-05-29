@@ -47,7 +47,7 @@ data/sample_openfoodfacts.csv
 ## Обучение
 
 ```bash
-.venv/bin/python src/kmeans_openfoodfacts.py \
+.venv/bin/python src/kmeans.py \
   --input data/sample_openfoodfacts.csv \
   --k 5 \
   --output-dir outputs/openfoodfacts_kmeans

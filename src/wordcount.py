@@ -14,7 +14,7 @@ class WordCountJob:
         parser = argparse.ArgumentParser(description="Run Spark WordCount example.")
         parser.add_argument(
             "--input",
-            default="input.txt",
+            default="data/data_for_wordcount.txt",
             help="Path to text file for WordCount.",
         )
         args = parser.parse_args()

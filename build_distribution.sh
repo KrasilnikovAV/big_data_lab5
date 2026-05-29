@@ -20,7 +20,7 @@ cp input.txt "${STAGE_DIR}/"
 
 mkdir -p "${STAGE_DIR}/src"
 cp src/wordcount.py "${STAGE_DIR}/src/"
-cp src/kmeans_openfoodfacts.py "${STAGE_DIR}/src/"
+cp src/kmeans.py "${STAGE_DIR}/src/"
 
 mkdir -p "${STAGE_DIR}/data"
 cp data/sample_openfoodfacts.csv "${STAGE_DIR}/data/"

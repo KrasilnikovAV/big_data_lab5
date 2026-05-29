@@ -6,7 +6,7 @@
 ## Состав
 
 - `src/wordcount.py` - проверка работоспособности Spark на примере WordCount.
-- `src/kmeans_openfoodfacts.py` - обучение KMeans-модели на пищевой ценности продуктов.
+- `src/kmeans.py` - обучение KMeans-модели на пищевой ценности продуктов.
 - `data/sample_openfoodfacts.csv` - подготовленная выборка OpenFoodFacts.
 - `outputs/openfoodfacts_kmeans/` - метрики, примеры кластеров и сохраненная модель.
 - `report.md` - отчет о проделанной работе.
@@ -41,6 +41,8 @@ export PATH="$JAVA_HOME/bin:$PATH"
 ```bash
 .venv/bin/python src/wordcount.py
 ```
+
+По умолчанию WordCount читает файл `data/data_for_wordcount.txt`.
 
 ## Запуск в Docker
 
@@ -77,7 +79,7 @@ docker compose run --rm kmeans
 ## Обучение модели
 
 ```bash
-.venv/bin/python src/kmeans_openfoodfacts.py \
+.venv/bin/python src/kmeans.py \
   --input data/sample_openfoodfacts.csv \
   --k 5 \
   --output-dir outputs/openfoodfacts_kmeans
@@ -86,7 +88,7 @@ docker compose run --rm kmeans
 Для слабой машины можно уменьшить объем данных после очистки:
 
 ```bash
-.venv/bin/python src/kmeans_openfoodfacts.py --sample-fraction 0.2
+.venv/bin/python src/kmeans.py --sample-fraction 0.2
 ```
 
 ## Сборка дистрибутива
